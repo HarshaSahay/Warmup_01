@@ -1,0 +1,286 @@
+/Q9. Write a program to find the sum of the given series 1+2+3+ . . . . . .(N terms)
+
+public class Sum {
+
+   public static void main(String[] args) {
+
+   int val=0,val1=1,sum=1;
+   int n=10;
+
+   for(int i=0;i<n-1;i++)
+
+   {
+
+    int k=val+val1;
+    sum=sum+k;
+    val=val1;
+    val1=k;
+    
+    
+   }
+   System.out.println(sum);
+
+}}
+
+
+Q)8. Given an array of N distinct elements, the task is to find all elements in array except two greatest
+elements in sorted order.
+
+
+import java.util.*;
+import java.io.*;
+
+class Sum
+{
+    
+	
+
+		static void findElements(int arr[], int n)
+		{
+		    Arrays.sort(arr);
+
+		    for (int i = 0; i < n - 2; i++)
+		    System.out.print(arr[i] + " ");
+		}
+
+
+
+
+		public static void main(String args[])
+		{
+		    int arr[] = { 2, -6 ,3 , 5, 1};
+		    int n = arr.length;
+		    findElements(arr, n);
+
+		}
+}
+Q6. Given an array of size N and you have to tell whether the array is perfect or not. An array is said to be perfect if it's reverse array matches the original array.
+ If the array is perfect then print"PERFECT" else print "NOT PERFECT".
+
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	int rev[]=new int[size];
+	int result = 0;
+	
+	System.out.println("Enter numbers");
+	for(int i=0;i<size;i++)
+	{
+		a[i]=sc.nextInt()	;
+		
+		for(int j=size-1;j>=0;j--)
+		{
+			rev[i]=a[j];
+			
+		}
+		if(rev[i]==a[i])
+		{
+			
+			result=1;
+		}
+		else
+		{
+			result=0;;
+			
+		}
+		 
+		
+	}
+	
+	if(result==1)
+	{
+		
+		System.out.println("Perfect");
+	}
+	else if(result==0)
+	{
+		System.out.println(" not Perfect");
+		
+	}
+	
+	}
+	
+	
+	
+	
+	
+}
+
+
+5.Given an array Arr of N positive integers. Your task is to find the elements whose value is equal to that of its index value ( Consider 1-based indexing ).
+
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	
+	
+	
+	
+	System.out.println("Enter numbers");
+	for(int i=1;i<=size+1;i++)
+	{
+		a[i]=sc.nextInt()	;
+		if(a[i]==i)
+		{
+			System.out.println( "a["+i+"]"+" ="+ i +" exists");
+		}
+		else
+		{
+			
+			System.out.println("No such number exists");
+		}
+	}
+	
+	
+	
+	}
+}
+
+
+4.You are given an array A of size N. You need to print elements of A in alternate order (starting from index 0).
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	System.out.println("Enter numbers");
+	for(int i=0;i<size;i++)
+	{
+	  a[i]=sc.nextInt()	;
+	}
+	
+	for(int i=0;i<size;i=i+2)
+	{
+		System.out.println(a[i]);
+	}
+	
+	
+	
+	}
+	
+}
+
+
+
+
+3.Given an sorted array A of size N. Find number of elements which are less than or equal to given element X.
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	System.out.println("Enter numbers");
+	for(int i=0;i<size;i++)
+	{
+	  a[i]=sc.nextInt()	;
+	}
+	System.out.println("Enter element X");
+	int X=sc.nextInt();
+	int counter=0;
+	for(int i=0;i<size;i++)
+	{
+	  if(a[i]<=X)
+	  {
+		  counter=counter+1;
+		  
+		  
+	  }
+	}
+	
+	System.out.println(counter);
+	
+	}
+	
+}
+
+
+
+2.Given an array A[] of N integers and an index Key. Your task is to print the element present at index key in the array.
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	System.out.println("Enter numbers");
+	for(int i=0;i<size;i++)
+	{
+	  a[i]=sc.nextInt()	;
+	}
+	System.out.println("Enter Index");
+	int index=sc.nextInt();
+	int num;
+	for(int i=0;i<size;i++)
+	{
+	  if(i==index)
+	  {
+		  num=a[i];
+		  System.out.println(num);
+		  
+	  }
+	}
+	
+	
+	
+	}
+	
+}
+
+
+
+ 1.Given an array of N integers. Your task is to print the sum of all of the integers.
+
+import java.util.*;
+import java.io.*;
+public class Sum
+{
+	public static void main(String[] args)
+	{
+	System.out.println("Enter Size of Array");
+	Scanner sc=new Scanner(System.in);
+	int size=sc.nextInt();
+	int a[]= new int[size];
+	int sum=0;
+	System.out.println("Enter numbers");
+	for(int i=0;i<size;i++)
+	{
+		a[i]=sc.nextInt();
+		sum=sum+a[i];
+	}
+	System.out.println("Sum of the numbers : "+sum);
+	}
+	
+}
